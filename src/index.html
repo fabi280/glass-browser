@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Glass Browser</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/vendor/reset.css" rel="stylesheet">
+        <link href="styles/app.scss" rel="stylesheet">
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </head>
+<body>
+
+    <div class="window-chrome">
+        <div class="app-label">Glass Browser</div>
+        <div class="window-controls">
+            <div class="info" onclick="openWebsite()"><img src="ui/info.png"/></div>
+            <div class="minimize" onclick="minimizeWindow()"><img src="ui/minimize.png" /></div>
+            <div class="maximize" onclick="maximizeWindow()"><img src="ui/maximize.png" /></div>
+            <div class="close" onclick="closeWindow()"><img src="ui/close.png" /></div>
+        </div>
+    </div>
+
+    <div class="app-controls">
+        <form id="addressBar">
+            <button onclick="browserBack()"><img src="ui/back.png" /></button>
+            <input type="text" value="" id="urlField"/>
+        </form>
+        <input type="range" value="0.95" min="0.2" max="1" step="0.05" id="transparencyRange"/>
+        <button onclick="enableClickThrough()" id="clickthroughButton"><img src="ui/eye.png"/></button>
+    </div>
+
+    <webview id="browserView" src="landing.html" style="display: inline-flex; width: 100%;"></webview>
+</body>
+</html>

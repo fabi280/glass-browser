@@ -1,26 +1,22 @@
-![N|Solid](https://github.com/mitchas/glass-browser/raw/master/assets/icon64.png)
+![N|Solid](https://github.com/tcyrus/glass-browser/raw/master/assets/icon64.png)
 # **Glass Browser**
-### [Downloads](https://github.com/mitchas/glass-browser/tree/master/releases)
+### [Downloads](https://github.com/tcyrus/glass-browser/tree/master/releases)
 
 A floating transparent browser for Windows.
   - Stays on top of other programs and apps.
   - Adjust transparency.
   - Click-through mode that ignores clicks and lets you interact with apps behind.
 
-![N|Solid](https://github.com/mitchas/glass-browser/raw/master/assets/screenshot.PNG)
+![N|Solid](https://github.com/tcyrus/glass-browser/raw/master/assets/screenshot.png)
 
 
-## Building & running it locally:
+## Building & running it locally
 - Clone the repo.
 - cd to the directory
-- make sure electron is installed `npm install electron`
-- install and run with `npm install && npm start`
+- `yarn install && yarn start`
 
-## Packaging it (.app for mac, .exe for windows, or for linux ** Untested on Mac and Linux)
-- Install [Electron Packager Interactive](https://github.com/Urucas/electron-packager-interactive) with `npm install -g electron-packager-interactive`
-- run `epi`
-- Follow steps
-  - Icon is `./assets/icon.ico'
+## Packaging it
+- `yarn run package`
 
 ## Using it
 - Enter a URL and hit >Enter

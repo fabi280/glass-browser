@@ -1,21 +1,48 @@
 {
-  "name": "Glass Browser",
+  "name": "glass-browser",
+  "productName": "Glass Browser",
   "version": "0.5.0",
   "description": "A floating transparent desktop browser.",
-  "main": "main.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
-  "repository": "https://github.com/mitchas/glass-browser",
+  "repository": "https://github.com/tcyrus/glass-browser",
   "keywords": [
     "Floating",
     "Browser",
     "Windows"
   ],
   "author": "Mitch Samuels",
-  "devDependencies": {
-    "electron": "~1.7.11",
-    "electron-rebuild": "^1.7.3"
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn",
+        "name": "<%= productName %>",
+        "icon": "assets/icon.ico"
+      },
+      "electronWinstallerConfig": {
+        "name": "glass-browser"
+      }
+    }
   },
-  "dependencies": {}
+  "dependencies": {
+    "electron-compile": "^6.4.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "electron-forge": "^5.2.1",
+    "electron-prebuilt-compile": "2.0.0"
+  }
 }
